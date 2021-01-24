@@ -9,6 +9,12 @@ import './Note.css'
 export default class Note extends React.Component {
   static defaultProps ={
     onDeleteNote: () => {},
+    id: '',
+    title: '',
+    content: '',
+    date_published: '',
+    folder: ''
+
   }
   static contextType = ApiContext;
 
@@ -40,6 +46,7 @@ export default class Note extends React.Component {
 
   render() {
     const { title, id, date_published } = this.props
+    
     return (
       <div className='Note'>
         <h2 className='Note__title'>
